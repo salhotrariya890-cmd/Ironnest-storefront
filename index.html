@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IronNest – Sports &amp; Home Gym Gear</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="logo">Iron<span>Nest</span></div>
+  <nav class="nav" aria-label="Main"><a href="#top">Home</a><a href="#shop">Shop</a><a href="#contact">Contact</a></nav>
+  <input id="search" class="search" type="search" placeholder="Search dumbbells, mats, rackets…" aria-label="Search products">
+  <button class="cart-btn" id="openCart">🛒 Cart (<span id="count">0</span>)</button>
+</header>
+
+<section class="hero">
+  <h1>Build your home gym.</h1>
+  <p>Strength gear, cardio machines and sports equipment, delivered to your door.</p>
+  <a href="#shop">Shop now</a>
+</section>
+
+<main id="shop">
+  <div class="toolbar">
+    <div class="chips" id="chips"></div>
+    <label class="pr">Max price: <b id="priceLabel"></b> <input type="range" id="price" min="500" max="35000" step="500" value="35000"></label>
+    <select id="sort" aria-label="Sort products">
+      <option value="default">Featured</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+      <option value="rating">Top rated</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="features">
+    <div>🚚<br><b>Free delivery</b><br><small>On orders above ₹2,999</small></div>
+    <div>↩️<br><b>7-day returns</b><br><small>No questions asked</small></div>
+    <div>🛡️<br><b>1-year warranty</b><br><small>On all machines</small></div>
+  </div>
+</main>
+
+<section id="contact" class="contact">
+  <h2>Contact us</h2>
+  <form id="contactForm" novalidate>
+    <input id="cn" placeholder="Your name" aria-label="Your name">
+    <input id="ce" type="email" placeholder="Email address" aria-label="Email address">
+    <textarea id="cm" rows="4" placeholder="Your message" aria-label="Your message"></textarea>
+    <p id="cerr" class="err" role="alert"></p>
+    <button class="checkout" type="submit">Send message</button>
+  </form>
+</section>
+
+<footer>© 2026 IronNest · A college project demo storefront</footer>
+
+<aside id="drawer" aria-label="Shopping cart">
+  <div class="dh"><b>Your cart</b><button id="closeCart" aria-label="Close cart">×</button></div>
+  <div id="items"></div>
+  <div class="df">
+    <div class="total"><span>Total</span><span id="total">₹0</span></div>
+    <button class="checkout" id="checkout">Checkout</button>
+  </div>
+</aside>
+<div id="modal" class="modal" hidden><div class="mbox"><button class="mclose" id="mclose" aria-label="Close">×</button><div id="mbody"></div></div></div>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
